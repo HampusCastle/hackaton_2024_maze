@@ -8,6 +8,7 @@ import org.apache.http.util.EntityUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
+@Deprecated
 public class HackathonController {
 
 
