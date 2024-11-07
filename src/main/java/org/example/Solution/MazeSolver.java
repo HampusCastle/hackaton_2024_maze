@@ -24,7 +24,7 @@ public class MazeSolver {
     private final int[][] maze;                     // 2D array för labyrinten, y and x koordinater
     private final int rows;                         // hur djup är labyrinten?
     private final int columns;                      // hur bred är labyrinten?
-    @Getter private final List<Node> visitedNodes;  // Lagrar vägarna ni tar i labyrinten
+    @Getter private final List<Node> visitedNodes;
 
 
     public MazeSolver(int[][] maze) {
@@ -37,24 +37,42 @@ public class MazeSolver {
 
 
     public boolean isValidMove(int row, int column) { // checking if valid move, else return false
-
+        return true;
     }
 
 
     public boolean traverseTheMaze(int row, int column, boolean[][] visited) {
-
+        return true;
     }
 
 
     public boolean solveTheMaze() {
-
-
+        visualizePath();
+        return true;
     }
 
 
 
-    private void visualizePath() {                      // to visualize the path taken when traversing the maze
+    private void visualizePath() {
+        char[][] pathMaze = new char[rows][columns];
 
+
+        for (Node node : visitedNodes) {
+            int row = node.getRow();
+            int column = node.getColumn();
+            pathMaze[row][column] = 'X';
+        }
+
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(pathMaze[i][j] == 'X' ? 'X' : ' ');
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 
 }
+
+

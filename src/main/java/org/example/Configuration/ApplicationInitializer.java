@@ -10,6 +10,7 @@ public class ApplicationInitializer {
 
     public static RunApplication initializeApplication() {
 
+        HackathonController hackathonController = new HackathonController();
         StringTextController stringTextController = new StringTextController();
         ParticipantService participantService = new ParticipantService(stringTextController, hackathonController);
         return new RunApplication(participantService, stringTextController);

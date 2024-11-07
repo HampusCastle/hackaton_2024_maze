@@ -21,7 +21,7 @@ public class Main {
                          Ni kan inte gå igenom väggar
                        Ni måste börja vid 2 och sluta på 3
 
-                När ni är klara kör ni testerna för att se hur det gick
+                När ni är klara kan kör ni testerna för att se hur det gick
             Vi föredrar en smart lösning över att alla tester har passerat
 
                     2 - Representerar startpunkten (GRÖN)
