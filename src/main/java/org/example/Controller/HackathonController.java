@@ -21,7 +21,7 @@ public class HackathonController {
         try {
             if (param != null || !param.isEmpty()) {
 
-                HttpGet request = new HttpGet("http://localhost:8080/api/maze/" + param);
+                HttpGet request = new HttpGet();
                 HttpResponse response = httpClient.execute(request);
 
                 responseData = EntityUtils.toString(response.getEntity(), "UTF-8");
