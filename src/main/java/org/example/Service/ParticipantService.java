@@ -2,9 +2,12 @@ package org.example.Service;
 
 import org.example.Controller.HackathonController;
 import org.example.Controller.StringTextController;
+import org.example.Model.Maze;
 import org.example.Solution.MazeSolver;
 
 import java.util.Scanner;
+
+import static org.example.Model.Maze.*;
 
 public class ParticipantService {
 
@@ -45,7 +48,7 @@ public class ParticipantService {
 
 
     public void chooseMazeToSolve()  {
-
+        Maze maze = new Maze();
         boolean continueTillParticipantQuit = true;
         while (continueTillParticipantQuit) {
 
@@ -53,9 +56,9 @@ public class ParticipantService {
             int userChoiceInput = new Scanner(System.in).nextInt();
             switch (userChoiceInput) {
 
-                case 1 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("first"));
-                case 2 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("secondMaze"));
-                case 3 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("thirdMaze"));
+                case 1 -> solveMazeWithMazeSolver(getFirstMaze());
+                case 2 -> solveMazeWithMazeSolver(getSecondMaze());
+                case 3 -> solveMazeWithMazeSolver(getThirdMaze());
                 case 4 -> continueTillParticipantQuit = false;
                 default -> System.out.println("Använd rätt input");
             }
@@ -71,10 +74,10 @@ public class ParticipantService {
             int userChoiceInput = new Scanner(System.in).nextInt();
             switch (userChoiceInput) {
 
-                case 1 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("fourthMaze"));
-                case 2 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("insaneMaze"));
-                case 3 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("insaneMazeTwo"));
-                case 4 -> solveMazeWithMazeSolver(hackathonController.mazeEndpointBuilder("insaneMazeThree"));
+                case 1 -> solveMazeWithMazeSolver(getFourthMaze());
+                case 2 -> solveMazeWithMazeSolver(getInsaneMaze());
+                case 3 -> solveMazeWithMazeSolver(getInsaneTwoMaze());
+                case 4 -> solveMazeWithMazeSolver(getInsaneThreeMaze());
                 case 5 -> continueTillParticipantQuit = false;
                 default -> System.out.println("Använd rätt input");
             }

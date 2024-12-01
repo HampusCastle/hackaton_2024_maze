@@ -3,7 +3,9 @@ package org.example;
 import org.example.Configuration.ApplicationInitializer;
 import org.example.Configuration.RunApplication;
 
-public class Main {
+public class
+
+Main {
 
 /*#####################################################################################
 
